@@ -35,11 +35,14 @@ onEvent('recipes', e => {
   function combRecipes(entries) {
     entries.forEach(([output, input, amount1, amount2]) => {
       const length = Math.min(craftingShapes.length, output.length)
+	  
       for (let i = 0; i < length; i++) {
         e.shaped(Item.of(output[i], amount1), craftingShapes[i], {
           C: input
         }).id(`kubejs:combs/${output[i].substring(output[i].indexOf(':') + 1)}`)
+		
         if (!amount2) continue
+		
         e.shaped(Item.of(output[i], amount2), craftingShapes[i], {
           C: `${input}_block`
         }).id(`kubejs:combs/block/${output[i].substring(output[i].indexOf(':') + 1)}`)
@@ -74,7 +77,7 @@ onEvent('recipes', e => {
         'minecraft:brown_mushroom',
         'minecraft:red_mushroom'
       ],
-      'resourcefulbees:cropy_honeycomb',
+      'resourcefulbees:croppy_honeycomb',
       3,
       27
     ],
@@ -109,7 +112,7 @@ onEvent('recipes', e => {
         'quark:jasper',
         'quark:limestone',
         'quark:basalt',
-        'astralsorcery:marble_raw'
+        'enviromats:marble'
       ],
       'resourcefulbees:stan_honeycomb',
       2,

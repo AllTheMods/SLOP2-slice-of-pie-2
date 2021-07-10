@@ -6,7 +6,6 @@ events.listen('block.tags', e => {
   e.add('resourcefulbees:valid_apiary', whitelistVA)
   e.add('resourcefulbees:valid_apiary', [
     'minecraft:lava',
-    'minecraft:water',
-    'allthemodium:molten_bluelava_block',
+    'minecraft:water'
   ])
 })
