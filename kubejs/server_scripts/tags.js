@@ -1,46 +1,19 @@
 //priority: 1000
-var alltheores = [
-    'aluminum',
-    'copper',
-    'lead',
-    'nickel',
-    'osmium',
-    'platinum',
-    'silver',
-    'tin',
-    'uranium',
-    'zinc'
-];
-
-events.listen('item.tags', e => {
+onEvent(`item.tags`, e => {
+  [`aluminum`, `copper`, `lead`, `nickel`, `osmium`, `platinum`, `silver`, `tin`, `uranium`, `zinc`].forEach(item => {
     //Mek Clumps
-    alltheores.forEach(item => {
-        e.get('mekanism:clumps/' + item).add('alltheores:' + item + '_clump');
-        e.get('mekanism:clumps').add('#mekanism:clumps/' + item);
-    });
+    e.add(`mekanism:clumps/${item}`, `alltheores:${item}_clump`)
+    e.add(`mekanism:clumps`, `#mekanism:clumps/${item}`)
     //Mek Dirty Dusts
-    alltheores.forEach(item => {
-        e.get('mekanism:dirty_dusts/' + item).add('alltheores:dirty_' + item + '_dust');
-        e.get('mekanism:dirty_dusts').add('#mekanism:dirty_dusts/' + item);
-    });
+    e.add(`mekanism:dirty_dusts/${item}`, `alltheores:dirty_${item}_dust`)
+    e.add(`mekanism:dirty_dusts`, `#mekanism:dirty_dusts/${item}`)
     //Mek Shards
-    alltheores.forEach(item => {
-        e.get('mekanism:shards/' + item).add('alltheores:' + item + '_shard');
-        e.get('mekanism:shards').add('#mekanism:shards/' + item);
-    });
+    e.add(`mekanism:shards/${item}`, `alltheores:${item}_shard`)
+    e.add(`mekanism:shards`, `#mekanism:shards/${item}`)
     //Mek Crystals
-    alltheores.forEach(item => {
-        e.get('mekanism:crystals/' + item).add('alltheores:' + item + '_crystal');
-        e.get('mekanism:crystals').add('#mekanism:crystals/' + item);
-    });
-})
+    e.add(`mekanism:crystals/${item}`, `alltheores:${item}_crystal`)
+    e.add(`mekanism:crystals`, `#mekanism:crystals/${item}`)
+  })
 
-//Block tags go here
-events.listen('block.tags', function(e) {
-
-})
-
-//Fluid tags go here
-events.listen('fluid.tags', function(e) {
-
+  e.add('forge:silicon', 'appliedenergistics2:silicon')
 })

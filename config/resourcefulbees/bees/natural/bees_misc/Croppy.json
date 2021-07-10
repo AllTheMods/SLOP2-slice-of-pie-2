@@ -1,23 +1,23 @@
 {
-    "flower": "allthemodium:molten_bluelava_block",
-    "maxTimeInHive": 4800,
-    "traits": ["nether", "angry", "soul_fire"],
+    "flower": "minecraft:hay_block",
+    "maxTimeInHive": 1200,
+    "traits": [""],
     "hasHoneycomb": true,
-    "baseLayerTexture": "modium/soul_lava_bee",
+    "baseLayerTexture": "/crop/wheat_bee",
     "ColorData": {
-        "primaryColor": "#7cc7d6",
-        "secondaryColor": "#7cc7d6",
-        "honeycombColor": "#7cc7d6",
+        "primaryColor": "#dcbb65",
+        "secondaryColor": "#dcbb65",
+        "honeycombColor": "#dcbb65",
         "primaryLayerTexture": "empty_layer",
         "secondaryLayerTexture": "empty_layer",
         "emissiveLayerTexture": "empty_layer",
         "isBeeColored": false,
         "isRainbowBee": false,
         "isGlowing": false,
-        "glowColor": "#7cc7d6",
+        "glowColor": "#dcbb65",
         "isEnchanted": false,
         "glowingPulse": 0,
-        "modelType": "DEFAULT"
+        "modelType": "CROP"
     },
     "CombatData": {
         "isPassive": true,
@@ -30,27 +30,27 @@
         "mutationCount": 1,
         "mutations": [{
             "type": "BLOCK_TO_ITEM",
-            "inputID": "resourcefulbees:soul_lava_honeycomb_block",
+            "inputID": "resourcefulbees:croppy_honeycomb_block",
             "outputs": [{
-                    "outputID": "resourcefulbees:soul_lava_honeycomb",
+                    "outputID": "resourcefulbees:croppy_honeycomb",
                     "weight": 80
                 },
                 {
-                    "outputID": "resourcefulbees:Soul_lava_bee_spawn_egg",
+                    "outputID": "resourcefulbees:croppy_bee_spawn_egg",
                     "weight": 20
                 }
             ]
         }]
     },
     "CentrifugeData": {
-        "hasCentrifugeOutput": true,
+        "hasCentrifugeOutput": false,
         "mainInputCount": 1,
-        "mainOutput": "allthemodium:molten_bluelava",
-        "mainOutputWeight": 0.75,
-        "mainOutputCount": 20,
+        "mainOutput": "resourcefulbees:croppy_honeycomb",
+        "mainOutputWeight": 0.5,
+        "mainOutputCount": 1,
         "mainNBTData": {},
-        "secondaryOutput": "resourcefulbees:soul_lava_honeycomb",
-        "secondaryOutputWeight": 0.01,
+        "secondaryOutput": "resourcefulbees:wax",
+        "secondaryOutputWeight": 0.2,
         "secondaryOutputCount": 1,
         "secondaryNBTData": {},
         "bottleOutput": "minecraft:honey_bottle",
@@ -58,13 +58,13 @@
         "bottleOutputCount": 1,
         "bottleNBTData": {},
         "recipeTime": 200,
-        "hasFluidOutput": true
+        "hasFluidOutput": false
     },
     "SpawnData": {
-        "canSpawnInWorld": false,
-        "biomeWhitelist": "",
+        "canSpawnInWorld": true,
+        "biomeWhitelist": "tag:croppy",
         "biomeBlacklist": "",
-        "spawnWeight": 2,
+        "spawnWeight": 5,
         "minYLevel": 0,
         "maxYLevel": 255,
         "minGroupSize": 1,
@@ -72,17 +72,17 @@
         "lightLevel": "ANY"
     },
     "BreedData": {
-        "isBreedable": false,
+        "isBreedable": true,
         "parent1": "",
         "parent2": "",
         "breedWeight": 10,
-        "breedChance": 0.60,
-        "feedItem": "",
+        "breedChance": 0.8,
+        "feedItem": "minecraft:hay_block",
         "feedAmount": 5,
         "childGrowthDelay": -24000,
         "breedDelay": 6000
     },
     "TraitData": {
-        "hasTraits": true
+        "hasTraits": false
     }
 }
