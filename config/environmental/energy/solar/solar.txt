@@ -1,0 +1,508 @@
+┏╸ma:solar
+┃┏╸bo:enabled
+┃┣> Variable Type: java.lang.Boolean
+┃┣> Default: true
+┃┗╸
+┃┏╸ma:cells
+┃┃┏╸ma:litherite
+┃┃┃┏╸ma:default_base_color
+┃┃┃┃┏╸in:r
+┃┃┃┃┣> Variable Type: java.lang.Integer
+┃┃┃┃┣> Default: 255
+┃┃┃┃┣> label.valkyrielib.requirements: [0~255]
+┃┃┃┃┗╸
+┃┃┃┃┏╸in:g
+┃┃┃┃┣> Variable Type: java.lang.Integer
+┃┃┃┃┣> Default: 255
+┃┃┃┃┣> label.valkyrielib.requirements: [0~255]
+┃┃┃┃┗╸
+┃┃┃┃┏╸in:b
+┃┃┃┃┣> Variable Type: java.lang.Integer
+┃┃┃┃┣> Default: 255
+┃┃┃┃┣> label.valkyrielib.requirements: [0~255]
+┃┃┃┃┗╸
+┃┃┃┗╸
+┃┃┗╸
+┃┃┏╸ma:erodium
+┃┃┃┏╸ma:default_base_color
+┃┃┃┃┏╸in:r
+┃┃┃┃┣> Variable Type: java.lang.Integer
+┃┃┃┃┣> Default: 247
+┃┃┃┃┣> label.valkyrielib.requirements: [0~255]
+┃┃┃┃┗╸
+┃┃┃┃┏╸in:g
+┃┃┃┃┣> Variable Type: java.lang.Integer
+┃┃┃┃┣> Default: 247
+┃┃┃┃┣> label.valkyrielib.requirements: [0~255]
+┃┃┃┃┗╸
+┃┃┃┃┏╸in:b
+┃┃┃┃┣> Variable Type: java.lang.Integer
+┃┃┃┃┣> Default: 247
+┃┃┃┃┣> label.valkyrielib.requirements: [0~255]
+┃┃┃┃┗╸
+┃┃┃┗╸
+┃┃┗╸
+┃┃┏╸ma:kyronite
+┃┃┃┏╸ma:default_base_color
+┃┃┃┃┏╸in:r
+┃┃┃┃┣> Variable Type: java.lang.Integer
+┃┃┃┃┣> Default: 239
+┃┃┃┃┣> label.valkyrielib.requirements: [0~255]
+┃┃┃┃┗╸
+┃┃┃┃┏╸in:g
+┃┃┃┃┣> Variable Type: java.lang.Integer
+┃┃┃┃┣> Default: 239
+┃┃┃┃┣> label.valkyrielib.requirements: [0~255]
+┃┃┃┃┗╸
+┃┃┃┃┏╸in:b
+┃┃┃┃┣> Variable Type: java.lang.Integer
+┃┃┃┃┣> Default: 239
+┃┃┃┃┣> label.valkyrielib.requirements: [0~255]
+┃┃┃┃┗╸
+┃┃┃┗╸
+┃┃┗╸
+┃┃┏╸ma:pladium
+┃┃┃┏╸ma:default_base_color
+┃┃┃┃┏╸in:r
+┃┃┃┃┣> Variable Type: java.lang.Integer
+┃┃┃┃┣> Default: 231
+┃┃┃┃┣> label.valkyrielib.requirements: [0~255]
+┃┃┃┃┗╸
+┃┃┃┃┏╸in:g
+┃┃┃┃┣> Variable Type: java.lang.Integer
+┃┃┃┃┣> Default: 231
+┃┃┃┃┣> label.valkyrielib.requirements: [0~255]
+┃┃┃┃┗╸
+┃┃┃┃┏╸in:b
+┃┃┃┃┣> Variable Type: java.lang.Integer
+┃┃┃┃┣> Default: 231
+┃┃┃┃┣> label.valkyrielib.requirements: [0~255]
+┃┃┃┃┗╸
+┃┃┃┗╸
+┃┃┗╸
+┃┃┏╸ma:ionite
+┃┃┃┏╸ma:default_base_color
+┃┃┃┃┏╸in:r
+┃┃┃┃┣> Variable Type: java.lang.Integer
+┃┃┃┃┣> Default: 223
+┃┃┃┃┣> label.valkyrielib.requirements: [0~255]
+┃┃┃┃┗╸
+┃┃┃┃┏╸in:g
+┃┃┃┃┣> Variable Type: java.lang.Integer
+┃┃┃┃┣> Default: 223
+┃┃┃┃┣> label.valkyrielib.requirements: [0~255]
+┃┃┃┃┗╸
+┃┃┃┃┏╸in:b
+┃┃┃┃┣> Variable Type: java.lang.Integer
+┃┃┃┃┣> Default: 223
+┃┃┃┃┣> label.valkyrielib.requirements: [0~255]
+┃┃┃┃┗╸
+┃┃┃┗╸
+┃┃┗╸
+┃┃┏╸ma:aethium
+┃┃┃┏╸ma:default_base_color
+┃┃┃┃┏╸in:r
+┃┃┃┃┣> Variable Type: java.lang.Integer
+┃┃┃┃┣> Default: 215
+┃┃┃┃┣> label.valkyrielib.requirements: [0~255]
+┃┃┃┃┗╸
+┃┃┃┃┏╸in:g
+┃┃┃┃┣> Variable Type: java.lang.Integer
+┃┃┃┃┣> Default: 215
+┃┃┃┃┣> label.valkyrielib.requirements: [0~255]
+┃┃┃┃┗╸
+┃┃┃┃┏╸in:b
+┃┃┃┃┣> Variable Type: java.lang.Integer
+┃┃┃┃┣> Default: 215
+┃┃┃┃┣> label.valkyrielib.requirements: [0~255]
+┃┃┃┃┗╸
+┃┃┃┗╸
+┃┃┗╸
+┃┃┏╸ma:nanorite
+┃┃┃┏╸ma:default_base_color
+┃┃┃┃┏╸in:r
+┃┃┃┃┣> Variable Type: java.lang.Integer
+┃┃┃┃┣> Default: 207
+┃┃┃┃┣> label.valkyrielib.requirements: [0~255]
+┃┃┃┃┗╸
+┃┃┃┃┏╸in:g
+┃┃┃┃┣> Variable Type: java.lang.Integer
+┃┃┃┃┣> Default: 207
+┃┃┃┃┣> label.valkyrielib.requirements: [0~255]
+┃┃┃┃┗╸
+┃┃┃┃┏╸in:b
+┃┃┃┃┣> Variable Type: java.lang.Integer
+┃┃┃┃┣> Default: 207
+┃┃┃┃┣> label.valkyrielib.requirements: [0~255]
+┃┃┃┃┗╸
+┃┃┃┗╸
+┃┃┗╸
+┃┃┏╸ma:xerothium
+┃┃┃┏╸ma:default_base_color
+┃┃┃┃┏╸in:r
+┃┃┃┃┣> Variable Type: java.lang.Integer
+┃┃┃┃┣> Default: 199
+┃┃┃┃┣> label.valkyrielib.requirements: [0~255]
+┃┃┃┃┗╸
+┃┃┃┃┏╸in:g
+┃┃┃┃┣> Variable Type: java.lang.Integer
+┃┃┃┃┣> Default: 199
+┃┃┃┃┣> label.valkyrielib.requirements: [0~255]
+┃┃┃┃┗╸
+┃┃┃┃┏╸in:b
+┃┃┃┃┣> Variable Type: java.lang.Integer
+┃┃┃┃┣> Default: 199
+┃┃┃┃┣> label.valkyrielib.requirements: [0~255]
+┃┃┃┃┗╸
+┃┃┃┗╸
+┃┃┗╸
+┃┗╸
+┃┏╸ma:ccus
+┃┃┏╸do:production_power
+┃┃┣> Variable Type: java.lang.Double
+┃┃┣> Default: 2.2
+┃┃┣> label.valkyrielib.requirements: [4.9E-324~1.7976931348623157E308]
+┃┃┗╸
+┃┃┏╸in:production_rate
+┃┃┣> Variable Type: java.lang.Integer
+┃┃┣> Default: 128
+┃┃┣> label.valkyrielib.requirements: [-2147483648~2147483647]
+┃┃┗╸
+┃┃┏╸ma:litherite
+┃┃┃┏╸ma:default_base_color
+┃┃┃┃┏╸in:r
+┃┃┃┃┣> Variable Type: java.lang.Integer
+┃┃┃┃┣> Default: 255
+┃┃┃┃┣> label.valkyrielib.requirements: [0~255]
+┃┃┃┃┗╸
+┃┃┃┃┏╸in:g
+┃┃┃┃┣> Variable Type: java.lang.Integer
+┃┃┃┃┣> Default: 255
+┃┃┃┃┣> label.valkyrielib.requirements: [0~255]
+┃┃┃┃┗╸
+┃┃┃┃┏╸in:b
+┃┃┃┃┣> Variable Type: java.lang.Integer
+┃┃┃┃┣> Default: 255
+┃┃┃┃┣> label.valkyrielib.requirements: [0~255]
+┃┃┃┃┗╸
+┃┃┃┗╸
+┃┃┃┏╸ma:default_core_color
+┃┃┃┃┏╸in:r
+┃┃┃┃┣> Variable Type: java.lang.Integer
+┃┃┃┃┣> Default: 40
+┃┃┃┃┣> label.valkyrielib.requirements: [0~254]
+┃┃┃┃┗╸
+┃┃┃┃┏╸in:g
+┃┃┃┃┣> Variable Type: java.lang.Integer
+┃┃┃┃┣> Default: 180
+┃┃┃┃┣> label.valkyrielib.requirements: [0~255]
+┃┃┃┃┗╸
+┃┃┃┃┏╸in:b
+┃┃┃┃┣> Variable Type: java.lang.Integer
+┃┃┃┃┣> Default: 232
+┃┃┃┃┣> label.valkyrielib.requirements: [0~255]
+┃┃┃┃┗╸
+┃┃┃┗╸
+┃┃┃┏╸fl:max_efficiency
+┃┃┃┣> Variable Type: java.lang.Float
+┃┃┃┣> Default: 0.56
+┃┃┃┣> label.valkyrielib.requirements: [0.0~1.0]
+┃┃┃┣> The maximum efficiency accepted from solar cells.
+┃┃┃┗> Anything above this value will not result in more energy.
+┃┃┗╸
+┃┃┏╸ma:erodium
+┃┃┃┏╸ma:default_base_color
+┃┃┃┃┏╸in:r
+┃┃┃┃┣> Variable Type: java.lang.Integer
+┃┃┃┃┣> Default: 247
+┃┃┃┃┣> label.valkyrielib.requirements: [0~255]
+┃┃┃┃┗╸
+┃┃┃┃┏╸in:g
+┃┃┃┃┣> Variable Type: java.lang.Integer
+┃┃┃┃┣> Default: 247
+┃┃┃┃┣> label.valkyrielib.requirements: [0~255]
+┃┃┃┃┗╸
+┃┃┃┃┏╸in:b
+┃┃┃┃┣> Variable Type: java.lang.Integer
+┃┃┃┃┣> Default: 247
+┃┃┃┃┣> label.valkyrielib.requirements: [0~255]
+┃┃┃┃┗╸
+┃┃┃┗╸
+┃┃┃┏╸ma:default_core_color
+┃┃┃┃┏╸in:r
+┃┃┃┃┣> Variable Type: java.lang.Integer
+┃┃┃┃┣> Default: 40
+┃┃┃┃┣> label.valkyrielib.requirements: [0~254]
+┃┃┃┃┗╸
+┃┃┃┃┏╸in:g
+┃┃┃┃┣> Variable Type: java.lang.Integer
+┃┃┃┃┣> Default: 180
+┃┃┃┃┣> label.valkyrielib.requirements: [0~255]
+┃┃┃┃┗╸
+┃┃┃┃┏╸in:b
+┃┃┃┃┣> Variable Type: java.lang.Integer
+┃┃┃┃┣> Default: 232
+┃┃┃┃┣> label.valkyrielib.requirements: [0~255]
+┃┃┃┃┗╸
+┃┃┃┗╸
+┃┃┃┏╸fl:max_efficiency
+┃┃┃┣> Variable Type: java.lang.Float
+┃┃┃┣> Default: 0.64
+┃┃┃┣> label.valkyrielib.requirements: [0.0~1.0]
+┃┃┃┣> The maximum efficiency accepted from solar cells.
+┃┃┃┗> Anything above this value will not result in more energy.
+┃┃┗╸
+┃┃┏╸ma:kyronite
+┃┃┃┏╸ma:default_base_color
+┃┃┃┃┏╸in:r
+┃┃┃┃┣> Variable Type: java.lang.Integer
+┃┃┃┃┣> Default: 239
+┃┃┃┃┣> label.valkyrielib.requirements: [0~255]
+┃┃┃┃┗╸
+┃┃┃┃┏╸in:g
+┃┃┃┃┣> Variable Type: java.lang.Integer
+┃┃┃┃┣> Default: 239
+┃┃┃┃┣> label.valkyrielib.requirements: [0~255]
+┃┃┃┃┗╸
+┃┃┃┃┏╸in:b
+┃┃┃┃┣> Variable Type: java.lang.Integer
+┃┃┃┃┣> Default: 239
+┃┃┃┃┣> label.valkyrielib.requirements: [0~255]
+┃┃┃┃┗╸
+┃┃┃┗╸
+┃┃┃┏╸ma:default_core_color
+┃┃┃┃┏╸in:r
+┃┃┃┃┣> Variable Type: java.lang.Integer
+┃┃┃┃┣> Default: 40
+┃┃┃┃┣> label.valkyrielib.requirements: [0~254]
+┃┃┃┃┗╸
+┃┃┃┃┏╸in:g
+┃┃┃┃┣> Variable Type: java.lang.Integer
+┃┃┃┃┣> Default: 180
+┃┃┃┃┣> label.valkyrielib.requirements: [0~255]
+┃┃┃┃┗╸
+┃┃┃┃┏╸in:b
+┃┃┃┃┣> Variable Type: java.lang.Integer
+┃┃┃┃┣> Default: 232
+┃┃┃┃┣> label.valkyrielib.requirements: [0~255]
+┃┃┃┃┗╸
+┃┃┃┗╸
+┃┃┃┏╸fl:max_efficiency
+┃┃┃┣> Variable Type: java.lang.Float
+┃┃┃┣> Default: 0.72
+┃┃┃┣> label.valkyrielib.requirements: [0.0~1.0]
+┃┃┃┣> The maximum efficiency accepted from solar cells.
+┃┃┃┗> Anything above this value will not result in more energy.
+┃┃┗╸
+┃┃┏╸ma:pladium
+┃┃┃┏╸ma:default_base_color
+┃┃┃┃┏╸in:r
+┃┃┃┃┣> Variable Type: java.lang.Integer
+┃┃┃┃┣> Default: 231
+┃┃┃┃┣> label.valkyrielib.requirements: [0~255]
+┃┃┃┃┗╸
+┃┃┃┃┏╸in:g
+┃┃┃┃┣> Variable Type: java.lang.Integer
+┃┃┃┃┣> Default: 231
+┃┃┃┃┣> label.valkyrielib.requirements: [0~255]
+┃┃┃┃┗╸
+┃┃┃┃┏╸in:b
+┃┃┃┃┣> Variable Type: java.lang.Integer
+┃┃┃┃┣> Default: 231
+┃┃┃┃┣> label.valkyrielib.requirements: [0~255]
+┃┃┃┃┗╸
+┃┃┃┗╸
+┃┃┃┏╸ma:default_core_color
+┃┃┃┃┏╸in:r
+┃┃┃┃┣> Variable Type: java.lang.Integer
+┃┃┃┃┣> Default: 40
+┃┃┃┃┣> label.valkyrielib.requirements: [0~254]
+┃┃┃┃┗╸
+┃┃┃┃┏╸in:g
+┃┃┃┃┣> Variable Type: java.lang.Integer
+┃┃┃┃┣> Default: 180
+┃┃┃┃┣> label.valkyrielib.requirements: [0~255]
+┃┃┃┃┗╸
+┃┃┃┃┏╸in:b
+┃┃┃┃┣> Variable Type: java.lang.Integer
+┃┃┃┃┣> Default: 232
+┃┃┃┃┣> label.valkyrielib.requirements: [0~255]
+┃┃┃┃┗╸
+┃┃┃┗╸
+┃┃┃┏╸fl:max_efficiency
+┃┃┃┣> Variable Type: java.lang.Float
+┃┃┃┣> Default: 0.8
+┃┃┃┣> label.valkyrielib.requirements: [0.0~1.0]
+┃┃┃┣> The maximum efficiency accepted from solar cells.
+┃┃┃┗> Anything above this value will not result in more energy.
+┃┃┗╸
+┃┃┏╸ma:ionite
+┃┃┃┏╸ma:default_base_color
+┃┃┃┃┏╸in:r
+┃┃┃┃┣> Variable Type: java.lang.Integer
+┃┃┃┃┣> Default: 223
+┃┃┃┃┣> label.valkyrielib.requirements: [0~255]
+┃┃┃┃┗╸
+┃┃┃┃┏╸in:g
+┃┃┃┃┣> Variable Type: java.lang.Integer
+┃┃┃┃┣> Default: 223
+┃┃┃┃┣> label.valkyrielib.requirements: [0~255]
+┃┃┃┃┗╸
+┃┃┃┃┏╸in:b
+┃┃┃┃┣> Variable Type: java.lang.Integer
+┃┃┃┃┣> Default: 223
+┃┃┃┃┣> label.valkyrielib.requirements: [0~255]
+┃┃┃┃┗╸
+┃┃┃┗╸
+┃┃┃┏╸ma:default_core_color
+┃┃┃┃┏╸in:r
+┃┃┃┃┣> Variable Type: java.lang.Integer
+┃┃┃┃┣> Default: 40
+┃┃┃┃┣> label.valkyrielib.requirements: [0~254]
+┃┃┃┃┗╸
+┃┃┃┃┏╸in:g
+┃┃┃┃┣> Variable Type: java.lang.Integer
+┃┃┃┃┣> Default: 180
+┃┃┃┃┣> label.valkyrielib.requirements: [0~255]
+┃┃┃┃┗╸
+┃┃┃┃┏╸in:b
+┃┃┃┃┣> Variable Type: java.lang.Integer
+┃┃┃┃┣> Default: 232
+┃┃┃┃┣> label.valkyrielib.requirements: [0~255]
+┃┃┃┃┗╸
+┃┃┃┗╸
+┃┃┃┏╸fl:max_efficiency
+┃┃┃┣> Variable Type: java.lang.Float
+┃┃┃┣> Default: 0.88
+┃┃┃┣> label.valkyrielib.requirements: [0.0~1.0]
+┃┃┃┣> The maximum efficiency accepted from solar cells.
+┃┃┃┗> Anything above this value will not result in more energy.
+┃┃┗╸
+┃┃┏╸ma:aethium
+┃┃┃┏╸ma:default_base_color
+┃┃┃┃┏╸in:r
+┃┃┃┃┣> Variable Type: java.lang.Integer
+┃┃┃┃┣> Default: 215
+┃┃┃┃┣> label.valkyrielib.requirements: [0~255]
+┃┃┃┃┗╸
+┃┃┃┃┏╸in:g
+┃┃┃┃┣> Variable Type: java.lang.Integer
+┃┃┃┃┣> Default: 215
+┃┃┃┃┣> label.valkyrielib.requirements: [0~255]
+┃┃┃┃┗╸
+┃┃┃┃┏╸in:b
+┃┃┃┃┣> Variable Type: java.lang.Integer
+┃┃┃┃┣> Default: 215
+┃┃┃┃┣> label.valkyrielib.requirements: [0~255]
+┃┃┃┃┗╸
+┃┃┃┗╸
+┃┃┃┏╸ma:default_core_color
+┃┃┃┃┏╸in:r
+┃┃┃┃┣> Variable Type: java.lang.Integer
+┃┃┃┃┣> Default: 40
+┃┃┃┃┣> label.valkyrielib.requirements: [0~254]
+┃┃┃┃┗╸
+┃┃┃┃┏╸in:g
+┃┃┃┃┣> Variable Type: java.lang.Integer
+┃┃┃┃┣> Default: 180
+┃┃┃┃┣> label.valkyrielib.requirements: [0~255]
+┃┃┃┃┗╸
+┃┃┃┃┏╸in:b
+┃┃┃┃┣> Variable Type: java.lang.Integer
+┃┃┃┃┣> Default: 232
+┃┃┃┃┣> label.valkyrielib.requirements: [0~255]
+┃┃┃┃┗╸
+┃┃┃┗╸
+┃┃┃┏╸fl:max_efficiency
+┃┃┃┣> Variable Type: java.lang.Float
+┃┃┃┣> Default: 0.96
+┃┃┃┣> label.valkyrielib.requirements: [0.0~1.0]
+┃┃┃┣> The maximum efficiency accepted from solar cells.
+┃┃┃┗> Anything above this value will not result in more energy.
+┃┃┗╸
+┃┃┏╸ma:nanorite
+┃┃┃┏╸ma:default_base_color
+┃┃┃┃┏╸in:r
+┃┃┃┃┣> Variable Type: java.lang.Integer
+┃┃┃┃┣> Default: 207
+┃┃┃┃┣> label.valkyrielib.requirements: [0~255]
+┃┃┃┃┗╸
+┃┃┃┃┏╸in:g
+┃┃┃┃┣> Variable Type: java.lang.Integer
+┃┃┃┃┣> Default: 207
+┃┃┃┃┣> label.valkyrielib.requirements: [0~255]
+┃┃┃┃┗╸
+┃┃┃┃┏╸in:b
+┃┃┃┃┣> Variable Type: java.lang.Integer
+┃┃┃┃┣> Default: 207
+┃┃┃┃┣> label.valkyrielib.requirements: [0~255]
+┃┃┃┃┗╸
+┃┃┃┗╸
+┃┃┃┏╸ma:default_core_color
+┃┃┃┃┏╸in:r
+┃┃┃┃┣> Variable Type: java.lang.Integer
+┃┃┃┃┣> Default: 40
+┃┃┃┃┣> label.valkyrielib.requirements: [0~254]
+┃┃┃┃┗╸
+┃┃┃┃┏╸in:g
+┃┃┃┃┣> Variable Type: java.lang.Integer
+┃┃┃┃┣> Default: 180
+┃┃┃┃┣> label.valkyrielib.requirements: [0~255]
+┃┃┃┃┗╸
+┃┃┃┃┏╸in:b
+┃┃┃┃┣> Variable Type: java.lang.Integer
+┃┃┃┃┣> Default: 232
+┃┃┃┃┣> label.valkyrielib.requirements: [0~255]
+┃┃┃┃┗╸
+┃┃┃┗╸
+┃┃┃┏╸fl:max_efficiency
+┃┃┃┣> Variable Type: java.lang.Float
+┃┃┃┣> Default: 1.0
+┃┃┃┣> label.valkyrielib.requirements: [0.0~1.0]
+┃┃┃┣> The maximum efficiency accepted from solar cells.
+┃┃┃┗> Anything above this value will not result in more energy.
+┃┃┗╸
+┃┃┏╸ma:xerothium
+┃┃┃┏╸ma:default_base_color
+┃┃┃┃┏╸in:r
+┃┃┃┃┣> Variable Type: java.lang.Integer
+┃┃┃┃┣> Default: 199
+┃┃┃┃┣> label.valkyrielib.requirements: [0~255]
+┃┃┃┃┗╸
+┃┃┃┃┏╸in:g
+┃┃┃┃┣> Variable Type: java.lang.Integer
+┃┃┃┃┣> Default: 199
+┃┃┃┃┣> label.valkyrielib.requirements: [0~255]
+┃┃┃┃┗╸
+┃┃┃┃┏╸in:b
+┃┃┃┃┣> Variable Type: java.lang.Integer
+┃┃┃┃┣> Default: 199
+┃┃┃┃┣> label.valkyrielib.requirements: [0~255]
+┃┃┃┃┗╸
+┃┃┃┗╸
+┃┃┃┏╸ma:default_core_color
+┃┃┃┃┏╸in:r
+┃┃┃┃┣> Variable Type: java.lang.Integer
+┃┃┃┃┣> Default: 40
+┃┃┃┃┣> label.valkyrielib.requirements: [0~254]
+┃┃┃┃┗╸
+┃┃┃┃┏╸in:g
+┃┃┃┃┣> Variable Type: java.lang.Integer
+┃┃┃┃┣> Default: 180
+┃┃┃┃┣> label.valkyrielib.requirements: [0~255]
+┃┃┃┃┗╸
+┃┃┃┃┏╸in:b
+┃┃┃┃┣> Variable Type: java.lang.Integer
+┃┃┃┃┣> Default: 232
+┃┃┃┃┣> label.valkyrielib.requirements: [0~255]
+┃┃┃┃┗╸
+┃┃┃┗╸
+┃┃┃┏╸fl:max_efficiency
+┃┃┃┣> Variable Type: java.lang.Float
+┃┃┃┣> Default: 1.0
+┃┃┃┣> label.valkyrielib.requirements: [0.0~1.0]
+┃┃┃┣> The maximum efficiency accepted from solar cells.
+┃┃┃┗> Anything above this value will not result in more energy.
+┃┃┗╸
+┃┗╸
+┗╸

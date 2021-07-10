@@ -1,0 +1,22 @@
+{
+"replace": false,
+"values": [
+"resourcefulbees:gold_honeycomb",
+"resourcefulbees:iron_honeycomb",
+"resourcefulbees:emerald_honeycomb",
+"resourcefulbees:pigman_honeycomb",
+"resourcefulbees:wither_honeycomb",
+"resourcefulbees:lapis_honeycomb",
+"resourcefulbees:netherite_honeycomb",
+"resourcefulbees:diamond_honeycomb",
+"resourcefulbees:coal_honeycomb",
+"resourcefulbees:dragon_honeycomb",
+"resourcefulbees:creeper_honeycomb",
+"resourcefulbees:nether_quartz_honeycomb",
+"resourcefulbees:zombie_honeycomb",
+"resourcefulbees:ender_honeycomb",
+"resourcefulbees:redstone_honeycomb",
+"resourcefulbees:rgbee_honeycomb",
+"resourcefulbees:skeleton_honeycomb"
+]
+}
