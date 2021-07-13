@@ -1,37 +1,34 @@
 //priority: 100
 onEvent(`jei.hide.items`, e => {
-  [`planks`,`slab`,`stairs`,`log`,`wood`,`bookshelf`,`crafting_table`,`fence`,`fence_gate`,`door`,`trapdoor`,`pressure_plate`,`button`,`boat`,`leaves`,`sapling`].forEach(type => {
-    e.hide([
-      `/biomesoplenty:.*${type}/`,
-      `/byg:.*${type}/`,
-      `/twilightforest:.*${type}/`
-    ])
-  })
-  [`bricks`,`bricks_slab`,`bricks_stairs`,`pillar`,`slab`,`stairs`,`bricks_vertical_slab`,`vertical_slab`,`bricks_wall`,`wall`,`cobble`,`polished`,`brick`,`brick_small`,`tile`,`tile_small`].forEach(type => {
-    e.hide([
-      `/envirocore:.*${type}/`,
-      `/enviromats:.*_${type}/`,
-      `/enviromats:alabaster_.*_${type}/`,
-    ])
-  })
-  const typeFirst = ['mekanism', 'immersiveengineering']
-
-  function hideMetal(mod, name, types) {
-    types.forEach(type => {
-      const id = typeFirst.includes(mod) ? `${mod}:${type}_${name}` : `${mod}:${name}_${type}`
-      if (!Ingredient.of(id).stacks.empty) e.hide(id)
+  function hideWood(list) {
+    list.forEach(type => {
+      if (!Ingredient.of(`/biomesoplenty:.*${type}/`).isEmpty()) e.hide(`/biomesoplenty:.*${type}/`)
+      if (!Ingredient.of(`/byg:.*${type}/`).isEmpty()) e.hide(`/byg:.*${type}/`)
+    })
+  }
+  function hideStone(list) {
+    list.forEach(type => {
+      if (!Ingredient.of(`/envirocore:.*${type}/`).isEmpty()) e.hide(`/envirocore:.*${type}/`)
+      if (!Ingredient.of(`/enviromats:.*_${type}/`).isEmpty()) e.hide(`/enviromats:.*_${type}/`)
     })
   }
 
+  const typeFirst = ['mekanism', 'immersiveengineering']
+  function hideMetal(mod, name, types) {
+    types.forEach(type => {
+      const id = typeFirst.includes(mod) ? `${mod}:${type}_${name}` : `${mod}:${name}_${type}`
+      if (!Ingredient.of(id).isEmpty()) e.hide(id)
+    })
+  }
   function hideStuff(mod, type, names) {
     names.forEach(name => {
       const id = typeFirst.includes(mod) ? `${mod}:${type}_${name}` : `${mod}:${name}_${type}`
-      if (!Ingredient.of(id).stacks.empty) e.hide(id)
+      if (!Ingredient.of(id).isEmpty()) e.hide(id)
     })
   }
 
   e.hide([
-    `/appliedenergistics2:.*_cable/`,
+    `/enviromats:alabaster.*/`,
 
     `/biomesoplenty:white.*/`,
     `/biomesoplenty:orange.*/`,
@@ -41,17 +38,6 @@ onEvent(`jei.hide.items`, e => {
     `biomesoplenty:mud_brick_stairs`,
     `biomesoplenty:mud_brick_slab`,
     `biomesoplenty:mud_brick_wall`,
-    /biomesoplenty:.*_stairs/,
-    /biomesoplenty:.*_fence_gate/,
-    /biomesoplenty:.*_fence/,
-    /biomesoplenty:.*_button/,
-    /biomesoplenty:.*_pressure_plate/,
-    /biomesoplenty:.*_trapdoor/,
-    /biomesoplenty:.*_slab/,
-    /biomesoplenty:.*_door/,
-    /biomesoplenty:.*_log/,
-    /biomesoplenty:.*_wood/,
-    /biomesoplenty:.*_planks/,
 
     /tconstruct:tinker_station/,
     /tconstruct:part_builder/,
@@ -86,9 +72,9 @@ onEvent(`jei.hide.items`, e => {
 
     `quark:ancient_tome`,
 
-    `appliedenergistics2:silicon`,
     `appliedenergistics2:flour`,
-    /appliedenergistics2:facade/,
+    `/appliedenergistics2:facade/`,
+    `/appliedenergistics2:.*_cable/`,
 
     /titanium:.*/,
 
@@ -131,13 +117,14 @@ onEvent(`jei.hide.items`, e => {
     'thermal:crude_oil_bucket',
     'immersivepetroleum:oil_bucket',
 
-    `twilightforest:uncrafting_table`,
-
     'thermal:rf_coil_creative_augment',
     'thermal:fluid_tank_creative_augment',
     'thermal:machine_catalyst_creative_augment'
   ])
-  
+
+  hideWood([`leaves`, `planks`, `slab`, `stairs`, `log`, `wood`, `bookshelf`, `crafting_table`, `fence`, `fence_gate`, `door`, `trapdoor`, `pressure_plate`, `button`, `boat`, `sapling`])
+  hideStone([`bricks`, `bricks_slab`, `bricks_stairs`, `pillar`, `slab`, `stairs`, `bricks_vertical_slab`, `vertical_slab`, `bricks_wall`, `wall`, `cobble`, `polished`, `brick`, `brick_small`, `tile`, `tile_small`])
+
   //Hides items based name, format: `mod`, `metal`, [`type1`, `type2`, `etc`]
   hideMetal(`immersiveengineering`, `copper`, [`ingot`, `ore`, `dust`, `nugget`, `storage`, `slab_storage`])
   hideMetal(`immersiveengineering`, `silver`, [`ingot`, `ore`, `dust`, `nugget`, `storage`, `slab_storage`])

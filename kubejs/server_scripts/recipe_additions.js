@@ -100,6 +100,60 @@ onEvent('recipes', e => {
   mekSaw('minecraft:oak_planks', 6, 'byg:withering_oak_log', 'mekanism:sawdust')
   mekSaw('mekanism:sawdust', 8, 'byg:imbued_nightshade_log')
 
+  //botania
+  e.recipes.botania.runic_altar({
+    output: {
+      item: 'kubejs:rune_of_sins'
+    },
+    mana: 25000,
+    ingredients: [{
+      tag: 'botania:runes/lust'
+    },
+    {
+      tag: 'botania:runes/gluttony'
+    },
+    {
+      tag: 'botania:runes/greed'
+    },
+    {
+      tag: 'botania:runes/sloth'
+    },
+    {
+      tag: 'botania:runes/wrath'
+    },
+    {
+      tag: 'botania:runes/envy'
+    },
+    {
+      tag: 'botania:runes/pride'
+    }
+    ]
+  }).id('kubejs:runic_altar/rune_of_sins')
+  e.recipes.botania.petal_apothecary({
+      output: {
+          item: 'kubejs:mass_of_wills'
+      },
+      ingredients: [{
+          item: 'botania:ancient_will_ahrim'
+      },
+      {
+          item: 'botania:ancient_will_dharok'
+      },
+      {
+          item: 'botania:ancient_will_guthan'
+      },
+      {
+          item: 'botania:ancient_will_torag'
+      },
+      {
+          item: 'botania:ancient_will_verac'
+      },
+      {
+          item: 'botania:ancient_will_karil'
+      }
+      ]
+  }).id('kubejs:petal_apothecary/mass_of_wills')
+
   //Create Splashing
   e.recipes.create.splashing([Item.of('alltheores:aluminum_nugget', 10), Item.of('alltheores:aluminum_nugget', 5).withChance(0.5)], 'create:crushed_aluminum_ore')
   e.recipes.create.splashing([Item.of('alltheores:platinum_nugget', 10), Item.of('alltheores:platinum_nugget', 5).withChance(0.5)], 'create:crushed_platinum_ore')

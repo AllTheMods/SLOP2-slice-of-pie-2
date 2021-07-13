@@ -5,7 +5,7 @@
 	"Piston Push Limit" = 12
 	#Set to true to make the quark big worldgen features such as stone clusters or underground biomes generate as spheres rather than unique shapes. It's faster, but won't look as cool
 	"Use Fast Worldgen" = false
-	"Enable 'q' Button" = true
+	"Enable 'q' Button" = false
 	#A list of screens that don't play well with quark's buttons. Use "Print Screen Classnames" to find the names of any others you'd want to add.
 	"Ignored Screens" = ["com.tfar.craftingstation.client.CraftingStationScreen", "com.refinedmods.refinedstorage.screen.grid.GridScreen", "appeng.client.gui.implementations.CraftingTermScreen", "appeng.client.gui.implementations.PatternTermScreen"]
 	"Use Anti Overlap" = true

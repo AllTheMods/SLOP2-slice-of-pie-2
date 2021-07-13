@@ -20,6 +20,9 @@
 		#Max health for a tier 1 mob
 		#Range: > 5
 		t1MaxHealth = 20
+		#Exotic drop chance
+		#Range: 0.0 ~ 100.0
+		exotic = 15.0
 
 	[factory.basicCell]
 		#Tank max transfer rate (mb/t per side)
