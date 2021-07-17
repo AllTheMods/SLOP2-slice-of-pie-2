@@ -11,6 +11,10 @@ onEvent('recipes', e => {
       'quark:crimson_chest',
       'quark:bamboo_block',
 
+      'resourcefulbees:bee_jar',
+
+      'create:andesite_alloy',
+
       'mekanism:digital_miner',
       'mekanism:atomic_disassembler',
       'mekanismgenerators:wind_generator',

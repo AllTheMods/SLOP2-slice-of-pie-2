@@ -1,15 +1,14 @@
 onEvent('recipes', e => {
+  e.forEachRecipe({ type: 'minecraft:crafting_shaped', output: '#minecraft:slabs' }, r => {
+    e.shaped(r.inputItems[0], ['S', 'S'], {S: r.outputItems[0]})
+  })
+
   function foodRecipe(result, edgeIngredient, middleIngredient) {
     e.shaped(result, ['FFF', 'FBF', 'FFF'], {
       F: edgeIngredient,
       B: middleIngredient
     })
   }
-
-  function kjsShaped(result, pattern, ingredients, count) {
-    e.shaped(`${!!count ? count : 1}x ${result}`, pattern, ingredients)
-  }
-
   function mekCrush(output, input, count) {
     e.recipes.mekanism.crushing(`${!!count ? count : 1}x ${output}`, input)
   }
@@ -130,28 +129,28 @@ onEvent('recipes', e => {
     ]
   }).id('kubejs:runic_altar/rune_of_sins')
   e.recipes.botania.petal_apothecary({
-      output: {
-          item: 'kubejs:mass_of_wills'
-      },
-      ingredients: [{
-          item: 'botania:ancient_will_ahrim'
-      },
-      {
-          item: 'botania:ancient_will_dharok'
-      },
-      {
-          item: 'botania:ancient_will_guthan'
-      },
-      {
-          item: 'botania:ancient_will_torag'
-      },
-      {
-          item: 'botania:ancient_will_verac'
-      },
-      {
-          item: 'botania:ancient_will_karil'
-      }
-      ]
+    output: {
+      item: 'kubejs:mass_of_wills'
+    },
+    ingredients: [{
+      item: 'botania:ancient_will_ahrim'
+    },
+    {
+      item: 'botania:ancient_will_dharok'
+    },
+    {
+      item: 'botania:ancient_will_guthan'
+    },
+    {
+      item: 'botania:ancient_will_torag'
+    },
+    {
+      item: 'botania:ancient_will_verac'
+    },
+    {
+      item: 'botania:ancient_will_karil'
+    }
+    ]
   }).id('kubejs:petal_apothecary/mass_of_wills')
 
   //Create Splashing
@@ -161,6 +160,19 @@ onEvent('recipes', e => {
   //Create Smelting
   e.smelting(item.of('alltheores:platinum_ingot'), 'create:crushed_platinum_ore').xp(1)
   e.smelting(item.of('alltheores:aluminum_ingot'), 'create:crushed_aluminum_ore').xp(1)
+
+  //Create Recipes
+  e.shaped('8x create:andesite_alloy', [
+    'NA',
+    'AN'
+  ], {
+    A: 'minecraft:andesite',
+    N: ['#forge:nuggets/iron', '#forge:nuggets/zinc']
+  })
+  e.recipes.create.mixing('8x create:andesite_alloy', [
+    'minecraft:andesite',
+    ['#forge:nuggets/iron', '#forge:nuggets/zinc']
+  ])
 
   //Thermal Processing
   e.recipes.thermal.pulverizer([Item.of('ars_nouveau:mana_gem', 2), Item.of('minecraft:gravel', 1).withChance(0.2)], 'ars_nouveau:arcane_ore')
@@ -223,20 +235,69 @@ onEvent('recipes', e => {
   e.shapeless('quark:bamboo_block', 'bambooeverything:bamboo_bundle')
   e.shapeless(Item.of('minecraft:bamboo', 9), 'quark:bamboo_block')
 
-  kjsShaped('minecraft:chest', [
+  //minecraft
+  // e.shaped('minecraft:chest', [
+  //   'S',
+  //   'S'
+  // ], {
+  //   S: '#minecraft:planks'
+  // })
+  e.shaped('minecraft:chest', [
     'PPP',
     'P P',
     'PPP'
   ], {
     P: '#minecraft:planks'
   })
+  e.shaped('4x minecraft:chest', [
+    'PPP',
+    'P P',
+    'PPP'
+  ], {
+    P: '#minecraft:logs'
+  })
+  e.shaped('minecraft:hopper', [
+    'ILI',
+    'ILI',
+    ' I '
+  ], {
+    I: '#forge:ingots/iron',
+    L: '#minecraft:logs'
+  })
 
-  // e.shaped(item.of('enviromats:alabaster_magenta', 8), [
-  //   'AAA',
-  //   'AMA',
-  //   'AAA'
-  // ], {
-  //   A: '#forge:alabaster',
-  //   M: '#forge:dyes/magenta'
-  // })
+  //Resourceful Bees
+  e.shaped('16x resourcefulbees:bee_jar', [
+    ' G ',
+    'G G',
+    'GGG'
+  ], {
+    G: '#forge:glass'
+  })
+
+  //ATM
+  e.shapeless('9x kubejs:atm_star', 'kubejs:atm_star_block')
+  e.shapeless('9x minecraft:nether_star', 'kubejs:nether _star_block')
+  e.shaped('kubejs:atm_star_block', [
+    'SSS',
+    'SSS',
+    'SSS'
+  ], {
+    S: 'kubejs:atm_star'
+  })
+  e.shaped('kubejs:nether _star_block', [
+    'SSS',
+    'SSS',
+    'SSS'
+  ], {
+    S: 'minecraft:nether_star'
+  })
+
+  e.shaped(item.of('enviromats:alabaster_magenta', 8), [
+    'AAA',
+    'AMA',
+    'AAA'
+  ], {
+    A: '#forge:alabaster',
+    M: '#forge:dyes/magenta'
+  })
 })

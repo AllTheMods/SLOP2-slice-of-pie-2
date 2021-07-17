@@ -153,8 +153,6 @@
 	lost_tablet_denied_structures = []
 	#The creatures that can't be captured in receptacle
 	black_list_capturable_souls = []
-	#Allows the purification effect to clear neutral effects [false/true|default:true]
-	purification_affect_neutral_effects = true
 	#Duration of voodoo poppet's effects in seconds when preventing death [5..60000|default:60]
 	#Range: 5 ~ 60000
 	duration_voodoo_poppet_effects = 60

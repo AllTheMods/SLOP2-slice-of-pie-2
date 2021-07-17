@@ -15,7 +15,7 @@ onEvent('recipes', e => {
       output: '#forge:ingots/' + name,
       type: 'minecraft:blasting'
     })
-    if (['iron', 'gold', 'azure_silver', 'crimson_iron'].indexOf(name) >= 0) {
+    if (name !== 'iron' && name !== 'gold' && name !== 'azure_silver' && name !== 'crimson_iron') {
       e.remove({
         input: '#forge:ores/' + name,
         output: 'mekanism:dust_' + name,
@@ -67,12 +67,9 @@ onEvent('recipes', e => {
       turns: 8
     }).id('kubejs:appliedenergistics2/grinder/ingot/' + name)
 
-
-    //If unifiable item doesn't have an ore, add it below (does not work so it's commented out for now)
     e.recipes.minecraft.smelting(ingotItem, '#forge:ores/' + name).xp(1).id('kubejs:minecraft/smelting/ores/' + name)
     e.recipes.minecraft.blasting(ingotItem, '#forge:ores/' + name).xp(1).id('kubejs:minecraft/blasting/ores/' + name)
     e.recipes.mekanism.enriching(item.of(dustItem, 2), '#forge:ores/' + name).id('kubejs:mekanism/enriching/ores/' + name)
-    //This is here to stop crushing hammer recipes for modium from generating
 
     e.remove({
       id: 'appliedenergistics2:grinder/' + name + '_dust_ore'
@@ -89,11 +86,6 @@ onEvent('recipes', e => {
       },
       turns: 8
     }).id('kubejs:appliedenergistics2/grinder/ores/' + name)
-    //} //End of if (!ingredient.of('#forge:ores/' + name).empty)
-    //e.replaceInput(nuggetItem, ('#forge:nuggets/' + name))
-    //e.replaceInput(dustItem, ('#forge:dusts/' + name))
-    //e.replaceInput(ingotItem, ('#forge:ingots/' + name))
-    //e.replaceInput(blockItem, ('#forge:storage_blocks/' + name))
   }
 
   function unifyCraftMetal(name, ingotItem, dustItem, blockItem, nuggetItem) {
@@ -129,7 +121,6 @@ onEvent('recipes', e => {
   unifyMetal('crimson_iron', 'silentgear:crimson_iron_ingot', 'silentgear:crimson_iron_dust', 'silentgear:crimson_iron_block', 'silentgear:crimson_iron_nugget')
 
   //Craft only metals
-  //Multiple Mods crafted only (no ore)
   unifyCraftMetal('bronze', 'mekanism:ingot_bronze', 'mekanism:dust_bronze', 'mekanism:block_bronze', 'mekanism:nugget_bronze')
   unifyCraftMetal('steel', 'mekanism:ingot_steel', 'mekanism:dust_steel', 'mekanism:block_steel', 'mekanism:nugget_steel')
 
