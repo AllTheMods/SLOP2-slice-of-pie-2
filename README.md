@@ -2,7 +2,7 @@
 
 All The Mods Slice of Pie 2
 ======
-This is the official repository and issue-tracker for All The Mods SLOP2 1.16.4
+This is the official repository and issue-tracker for All The Mods SLOP2 1.16.5
   
 Does "All The Mods" *really* contain ALL THE MODS? No, of course not.
    
