@@ -1,6 +1,9 @@
 onEvent('recipes', e => {
   e.forEachRecipe({ type: 'minecraft:crafting_shaped', output: '#minecraft:slabs' }, r => {
-    e.shaped(r.inputItems[0], ['S', 'S'], {S: r.outputItems[0]})
+    e.shaped(r.inputItems[0], ['S', 'S'], {S: Item.of(r.outputItems[0].id)})
+  })
+  e.forEachRecipe({ type: 'minecraft:stonecutting', output: '#minecraft:stairs' }, r => {
+    e.stonecutting(r.inputItems[0], Item.of(r.outputItems[0].id))
   })
 
   function foodRecipe(result, edgeIngredient, middleIngredient) {
@@ -236,12 +239,6 @@ onEvent('recipes', e => {
   e.shapeless(Item.of('minecraft:bamboo', 9), 'quark:bamboo_block')
 
   //minecraft
-  // e.shaped('minecraft:chest', [
-  //   'S',
-  //   'S'
-  // ], {
-  //   S: '#minecraft:planks'
-  // })
   e.shaped('minecraft:chest', [
     'PPP',
     'P P',

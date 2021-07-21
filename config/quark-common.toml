@@ -52,6 +52,7 @@
 	"Pistons Move Tile Entities" = true
 	"Redstone Circuit" = true
 	"Weather Sensor" = true
+	"Jukebox Automation" = true
 
 	[automation.chain_linkage]
 		#Can vehicle-linking chains be used for crafting chain armor?
@@ -255,6 +256,7 @@
 	"Seed Pouch" = true
 	"Slime In A Bucket" = true
 	Trowel = true
+	"Ambient Discs" = true
 
 	[tools.ancient_tomes]
 		#Set to 0 to not generate in Dungeons
@@ -272,9 +274,9 @@
 		#Set to 0 to not generate in Monster Boxes
 		"Monster Box Weight" = 5
 		"Item Quality" = 2
-		"Merge Cost" = 35
-		"Apply Cost" = 35
 		"Valid Enchantments" = ["minecraft:feather_falling", "minecraft:thorns", "minecraft:sharpness", "minecraft:smite", "minecraft:bane_of_arthropods", "minecraft:knockback", "minecraft:fire_aspect", "minecraft:looting", "minecraft:sweeping", "minecraft:efficiency", "minecraft:unbreaking", "minecraft:fortune", "minecraft:power", "minecraft:punch", "minecraft:luck_of_the_sea", "minecraft:lure", "minecraft:loyalty", "minecraft:riptide", "minecraft:impaling", "minecraft:piercing"]
+		"Normal Upgrade Cost" = 10
+		"Limit Break Upgrade Cost" = 30
 
 	[tools.bottled_cloud]
 		"Cloud Level Bottom" = 127
@@ -333,10 +335,13 @@
 		"Shift Range" = 3
 
 	[tools.trowel]
-		#Amount of blocks placed is this value + 1. Default is 255 (4 stacks).
+		#Amount of blocks placed is this value + 1.
 		#Set to 0 to make the Trowel unbreakable
 		#Allowed values: [0,)
 		"Trowel Max Durability" = 255
+
+	[tools.ambient_discs]
+		"Drop On Spider Kill" = true
 
 [tweaks]
 	"Skull Pikes" = true
@@ -368,6 +373,7 @@
 	"Springy Slime" = true
 	"Utility Recipes" = true
 	"Villagers Follow Emeralds" = true
+	"More Banner Layers" = true
 
 	[tweaks.skull_pikes]
 		"Pike Range" = 5.0
@@ -475,6 +481,10 @@
 		"Torches Burn" = true
 		#Can bones be smelted down to bone meal?
 		"Bone Meal Utility" = true
+
+	[tweaks.more_banner_layers]
+		#Allowed values: [1,16]
+		"Layer Limit" = 16
 
 [world]
 	"Big Dungeon" = true
@@ -1249,6 +1259,7 @@
 		"Tries Per Chunk In Nether" = 4
 		"Speleothems Per Chunk In Nether" = 12
 		"Max Ylevel" = 55
+		"Small Speleothems Increase Fall Damage" = true
 
 		[world.speleothems.dimensions]
 			"Is Blacklist" = true
@@ -1854,13 +1865,13 @@
 
 	[client.greener_grass]
 		"Affect Leaves" = true
-		"Alpha Grass" = false
-		"Absolute Values" = false
-		"Red Shift" = -30
-		"Green Shift" = 30
-		"Blue Shift" = -30
 		"Block List" = ["minecraft:large_fern", "minecraft:tall_grass", "minecraft:grass_block", "minecraft:fern", "minecraft:grass", "minecraft:potted_fern", "minecraft:sugar_cane", "environmental:giant_tall_grass", "valhelsia_structures:grass_block"]
 		"Leaves List" = ["minecraft:spruce_leaves", "minecraft:birch_leaves", "minecraft:oak_leaves", "minecraft:jungle_leaves", "minecraft:acacia_leaves", "minecraft:dark_oak_leaves", "atmospheric:rosewood_leaves", "atmospheric:morado_leaves", "atmospheric:yucca_leaves", "autumnity:maple_leaves", "environmental:willow_leaves", "environmental:hanging_willow_leaves", "minecraft:vine"]
+
+		[client.greener_grass.color_matrix]
+			R = [0.89, 0.0, 0.0]
+			G = [0.0, 1.11, 0.0]
+			B = [0.0, 0.0, 0.89]
 
 	[client.improved_tooltips]
 		"Attribute Tooltips" = true
@@ -1970,6 +1981,8 @@
 		"Influence Max" = 4
 		#How much each candle influences an enchantment. This works as a multiplier to its weight
 		"Influence Power" = 0.125
+		#If you set this to false, the vanilla Enchanting Table will no longer automatically convert to the Matrix Enchanting table. You'll have to add a recipe for the Matrix Enchanting Table to make use of this.
+		"Automatically Convert" = true
 
 	[oddities.pipes]
 		#How long it takes for an item to cross a pipe. Bigger = slower.

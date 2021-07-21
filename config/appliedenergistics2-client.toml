@@ -52,9 +52,9 @@
 
 [terminals]
 	#Allowed Values: TALL, FULL, SMALL
-	terminalStyle = "TALL"
+	terminalStyle = "SMALL"
 	#Allowed Values: AUTOSEARCH, AUTOSEARCH_KEEP, MANUAL_SEARCH, MANUAL_SEARCH_KEEP, JEI_AUTOSEARCH, JEI_AUTOSEARCH_KEEP, JEI_MANUAL_SEARCH, JEI_MANUAL_SEARCH_KEEP
-	terminalSearchMode = "AUTOSEARCH"
+	terminalSearchMode = "MANUAL_SEARCH"
 	#Should tooltips be searched. Performance impact
 	#Allowed Values: YES, NO, UNDECIDED
 	searchTooltips = "YES"
