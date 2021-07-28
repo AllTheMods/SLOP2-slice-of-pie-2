@@ -77,7 +77,7 @@
         "parent2": "",
         "breedWeight": 10,
         "breedChance": 0.8,
-        "feedItem": "tag:misctags:flowers/glowing_flowers",
+        "feedItem": "minecraft:glowstone",
         "feedAmount": 5,
         "childGrowthDelay": -24000,
         "breedDelay": 6000
