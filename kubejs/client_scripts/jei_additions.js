@@ -8,6 +8,11 @@ onEvent('jei.add.items', e => {
 
     Item.of(`minecraft:dragon_egg`),
     Item.of(`resourcefulbees:dragonic_bee_spawn_egg`),
-    Item.of(`resourcefulbees:netherite_bee_spawn_egg`)
+    Item.of(`resourcefulbees:netherite_bee_spawn_egg`),
+    Item.of(`appliedenergistics2:fluix_glass_cable`),
+    Item.of(`appliedenergistics2:fluix_covered_cable`),
+    Item.of(`appliedenergistics2:fluix_smart_cable`),
+    Item.of(`appliedenergistics2:fluix_covered_dense_cable`),
+    Item.of(`appliedenergistics2:fluix_smart_dense_cable`)
   ])
 })

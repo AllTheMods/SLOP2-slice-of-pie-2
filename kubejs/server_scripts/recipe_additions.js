@@ -1,3 +1,4 @@
+//priority: 10
 onEvent('recipes', e => {
   e.forEachRecipe({ type: 'minecraft:crafting_shaped', output: '#minecraft:slabs' }, r => {
     e.shaped(r.inputItems[0], ['S', 'S'], {S: Item.of(r.outputItems[0].id)})
@@ -102,7 +103,7 @@ onEvent('recipes', e => {
   mekSaw('minecraft:oak_planks', 6, 'byg:withering_oak_log', 'mekanism:sawdust')
   mekSaw('mekanism:sawdust', 8, 'byg:imbued_nightshade_log')
 
-  //botania
+  //Botania
   e.recipes.botania.runic_altar({
     output: {
       item: 'kubejs:rune_of_sins'
@@ -156,28 +157,17 @@ onEvent('recipes', e => {
     ]
   }).id('kubejs:petal_apothecary/mass_of_wills')
 
-  //Create Splashing
+  //Create
   e.recipes.create.splashing([Item.of('alltheores:aluminum_nugget', 10), Item.of('alltheores:aluminum_nugget', 5).withChance(0.5)], 'create:crushed_aluminum_ore')
   e.recipes.create.splashing([Item.of('alltheores:platinum_nugget', 10), Item.of('alltheores:platinum_nugget', 5).withChance(0.5)], 'create:crushed_platinum_ore')
-
-  //Create Smelting
   e.smelting(item.of('alltheores:platinum_ingot'), 'create:crushed_platinum_ore').xp(1)
   e.smelting(item.of('alltheores:aluminum_ingot'), 'create:crushed_aluminum_ore').xp(1)
+  const ingredients = []
+  for(let i = 0; i < 64; i++) ingredients.push({"item": "engineerstools:musli_bar"})
+  e.recipes.create.mixing('5x kubejs:potassium_dust', ingredients).superheated()
 
-  //Create Recipes
-  e.shaped('8x create:andesite_alloy', [
-    'NA',
-    'AN'
-  ], {
-    A: 'minecraft:andesite',
-    N: ['#forge:nuggets/iron', '#forge:nuggets/zinc']
-  })
-  e.recipes.create.mixing('8x create:andesite_alloy', [
-    'minecraft:andesite',
-    ['#forge:nuggets/iron', '#forge:nuggets/zinc']
-  ])
-
-  //Thermal Processing
+  //Thermal
+  e.recipes.thermal.press('create:brass_sheet', 'create:brass_ingot', 1)
   e.recipes.thermal.pulverizer([Item.of('ars_nouveau:mana_gem', 2), Item.of('minecraft:gravel', 1).withChance(0.2)], 'ars_nouveau:arcane_ore')
   e.recipes.thermal.pulverizer([Item.of('appliedenergistics2:certus_quartz_crystal', 3), Item.of('appliedenergistics2:certus_quartz_dust', 1), Item.of('minecraft:gravel', 1).withChance(0.2)], 'appliedenergistics2:quartz_ore')
   e.recipes.thermal.pulverizer([Item.of('appliedenergistics2:charged_certus_quartz_crystal', 3), Item.of('appliedenergistics2:certus_quartz_dust', 1), Item.of('minecraft:gravel', 1).withChance(0.2)], 'appliedenergistics2:charged_quartz_ore')
@@ -239,6 +229,30 @@ onEvent('recipes', e => {
   e.shapeless(Item.of('minecraft:bamboo', 9), 'quark:bamboo_block')
 
   //minecraft
+  e.shaped('minecraft:iron_horse_armor', [
+    'M M',
+    'MLM',
+    'M M'
+  ], {
+    M: '#forge:ingots/iron',
+    L: '#forge:leather'
+  })
+  e.shaped('minecraft:golden_horse_armor', [
+    'M M',
+    'MLM',
+    'M M'
+  ], {
+    M: '#forge:ingots/gold',
+    L: '#forge:leather'
+  })
+  e.shaped('minecraft:diamond_horse_armor', [
+    'M M',
+    'MLM',
+    'M M'
+  ], {
+    M: '#forge:gems/diamond',
+    L: '#forge:leather'
+  })
   e.shaped('minecraft:chest', [
     'PPP',
     'P P',
@@ -253,6 +267,12 @@ onEvent('recipes', e => {
   ], {
     P: '#minecraft:logs'
   })
+  e.shaped('16x minecraft:stick', [
+    'P',
+    'P'
+  ], {
+    P: '#minecraft:logs'
+  })
   e.shaped('minecraft:hopper', [
     'ILI',
     'ILI',
@@ -262,18 +282,9 @@ onEvent('recipes', e => {
     L: '#minecraft:logs'
   })
 
-  //Resourceful Bees
-  e.shaped('16x resourcefulbees:bee_jar', [
-    ' G ',
-    'G G',
-    'GGG'
-  ], {
-    G: '#forge:glass'
-  })
-
   //ATM
   e.shapeless('9x kubejs:atm_star', 'kubejs:atm_star_block')
-  e.shapeless('9x minecraft:nether_star', 'kubejs:nether _star_block')
+  e.shapeless('9x minecraft:nether_star', 'kubejs:nether_star_block')
   e.shaped('kubejs:atm_star_block', [
     'SSS',
     'SSS',
@@ -281,7 +292,7 @@ onEvent('recipes', e => {
   ], {
     S: 'kubejs:atm_star'
   })
-  e.shaped('kubejs:nether _star_block', [
+  e.shaped('kubejs:nether_star_block', [
     'SSS',
     'SSS',
     'SSS'

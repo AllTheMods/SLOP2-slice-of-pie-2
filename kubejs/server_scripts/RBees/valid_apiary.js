@@ -1,3 +1,23 @@
+const VA = 'resourcefulbees:valid_apiary'
+
+//Adding Valid Apiary tags
+events.listen('item.tags', e => {
+  e.add(VA, whitelistVA)
+  e.remove(VA, blacklistVA)
+  //Item Only
+  e.remove(VA, 'quark:biotite')
+})
+
+events.listen('block.tags', e => {
+  e.add(VA, whitelistVA)
+  e.add(VA, [
+    //Fluids
+    'minecraft:lava',
+    'minecraft:water'
+  ])
+  e.remove(VA, blacklistVA)
+})
+
 const whitelistVA = [
   //Flowers
   'biomesoplenty:flesh',
@@ -23,13 +43,10 @@ const whitelistVA = [
   /minecraft:.*prismarine/,
   'minecraft:smooth_stone',
   'minecraft:sea_lantern',
-  // 'minecraft:end_stone_bricks',
   '#minecraft:base_stone_nether',
-  // '#minecraft:stone_bricks',
   '#minecraft:wart_blocks',
   '#forge:soul_sand',
   '#minecraft:nylium',
-  // 'minecraft:soul_soil',
   'minecraft:glowstone',
 
   /create:.+_window/,
@@ -40,8 +57,6 @@ const whitelistVA = [
   /create:.*dolomite/,
   /create:.*gabbro/,
   /create:.*scoria/,
-
-  // /glassential:glass_/,
 
   /immersiveengineering:slab_sheetmetal_+/,
   /immersiveengineering:sheetmetal_+/,

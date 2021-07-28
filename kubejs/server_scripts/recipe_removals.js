@@ -1,3 +1,4 @@
+//priority: 10
 onEvent('recipes', e => {
   e.remove({
     output: [
@@ -10,10 +11,6 @@ onEvent('recipes', e => {
       'quark:warped_chest',
       'quark:crimson_chest',
       'quark:bamboo_block',
-
-      'resourcefulbees:bee_jar',
-
-      'create:andesite_alloy',
 
       'mekanism:digital_miner',
       'mekanism:atomic_disassembler',
@@ -28,6 +25,10 @@ onEvent('recipes', e => {
       'industrialforegoing:infinity_drill',
 
       'bambooeverything:bamboo_bundle',
+
+      'storagedrawers:compacting_drawers_3',
+      'storagedrawers:controller',
+      'storagedrawers:controller_slave'
     ]
   })
   

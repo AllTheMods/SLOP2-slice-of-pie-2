@@ -76,6 +76,7 @@ onEvent(`jei.hide.items`, e => {
     `/appliedenergistics2:facade/`,
     `/appliedenergistics2:.*_cable/`,
 
+    /theoneprobe.*/,
     /titanium:.*/,
 
     `bloodmagic:saltpeter`,
