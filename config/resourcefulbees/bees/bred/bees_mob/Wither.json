@@ -1,5 +1,5 @@
 {
-    "flower": "tag:forge:storage_blocks/nether_star",
+    "flower": "kubejs:nether_star_block",
     "maxTimeInHive": 2400,
     "traits": ["nether", "wither"],
     "hasHoneycomb": true,
