@@ -225,4 +225,11 @@ onEvent('recipes', e => {
   //#endregion MEKANISM
 
   //#endregion ADDITIONS
+
+  //#region REPLACEMENTS
+  e.replaceInput({id: 'pamhc2foodextended:strawberryjellyitem'}, 'pamhc2crops:strawberryitem', '#forge:crops/strawberry')
+  e.replaceInput({id: 'pamhc2foodextended:strawberryjuiceitem'}, 'pamhc2crops:strawberryitem', '#forge:crops/strawberry')
+  e.replaceInput({id: 'pamhc2foodextended:strawberrysmoothieitem'}, 'pamhc2crops:strawberryitem', '#forge:crops/strawberry')
+  e.replaceInput({id: 'pamhc2foodextended:greenbeancasseroleitem'}, 'pamhc2crops:beanitem', '#forge:crops/green_bean')
+  //#endregion
 })
