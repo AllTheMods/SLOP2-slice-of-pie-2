@@ -33,11 +33,8 @@ onEvent('block.right_click', e => {
           let creativeCubeData = placedBlock.getEntityData()
           creativeCubeData.EnergyContainers.push({ Container: 0, stored: "18446744073709551615.9999" })
           placedBlock.getEntityData().putAll(creativeCubeData)
-
-          e.server.runCommand(`/fill ${blockPosition(placedBlock.offset(NORTH, 2))} minecraft:air replace`)
-          e.server.runCommand(`/fill ${blockPosition(placedBlock.offset(SOUTH, 2))} minecraft:air replace`)
-          e.server.runCommand(`/fill ${blockPosition(placedBlock.offset(NORTH, 2))} mekanism:ultimate_energy_cube{mekData:{}} replace`)
-          e.server.runCommand(`/fill ${blockPosition(placedBlock.offset(SOUTH, 2))} mekanism:ultimate_energy_cube{mekData:{}} replace`)
+          placedBlock.offset(SOUTH, 2).set(`mekanism:ultimate_energy_cube{mekData:{}}`)
+          placedBlock.offset(NORTH, 2).set(`mekanism:ultimate_energy_cube{mekData:{}}`)
 
           e.server.runCommand('/title @a title {"text":"Cube filled!","color":"green"}')
 
@@ -51,11 +48,8 @@ onEvent('block.right_click', e => {
           let creativeCubeData = placedBlock.getEntityData()
           creativeCubeData.EnergyContainers.push({ Container: 0, stored: "18446744073709551615.9999" })
           placedBlock.getEntityData().putAll(creativeCubeData)
-
-          e.server.runCommand(`/fill ${blockPosition(placedBlock.offset(WEST, 2))} minecraft:air replace`)
-          e.server.runCommand(`/fill ${blockPosition(placedBlock.offset(EAST, 2))} minecraft:air replace`)
-          e.server.runCommand(`/fill ${blockPosition(placedBlock.offset(WEST, 2))} mekanism:ultimate_energy_cube{mekData:{}} replace`)
-          e.server.runCommand(`/fill ${blockPosition(placedBlock.offset(EAST, 2))} mekanism:ultimate_energy_cube{mekData:{}} replace`)
+          placedBlock.offset(WEST, 2).set(`mekanism:ultimate_energy_cube{mekData:{}}`)
+          placedBlock.offset(EAST, 2).set(`mekanism:ultimate_energy_cube{mekData:{}}`)
 
           e.server.runCommand('/title @a title {"text":"Cube filled!","color":"green"}')
         } else {

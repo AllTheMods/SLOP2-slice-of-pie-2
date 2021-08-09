@@ -96,13 +96,14 @@ onEvent('recipes', e => {
       }]
     }
   }), [
-    'RMR',
-    'MSM',
-    'RMR'
+    ' L ',
+    'UCU',
+    ' S '
   ], {
     S: atm_star,
-    M: Item.of('appliedenergistics2:dense_energy_cell', { internalCurrentPower: 1600000 }),
-    R: 'mekanism:creative_energy_cube'
+    U: Item.of('mekanism:ultimate_energy_cube', {mekData:{EnergyContainers:[{Container:0,stored:"4096000000"}]}}),
+    C: 'mekanism:creative_energy_cube',
+    L: 'thermal:lightning_charge'
   })
 
   //Create

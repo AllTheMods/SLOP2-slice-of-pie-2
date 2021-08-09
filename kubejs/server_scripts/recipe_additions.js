@@ -36,6 +36,11 @@ onEvent('recipes', e => {
   mekCrush('thermal:cinnabar_dust', 'thermal:cinnabar')
   mekCrush('thermal:niter_dust', 'thermal:niter')
   mekCrush('thermal:sulfur_dust', 'thermal:sulfur')
+  mekCrush('mekanism:bio_fuel', `#misctags:biofuel2`, 2)
+  mekCrush('mekanism:bio_fuel', `#misctags:biofuel4`, 4)
+  mekCrush('mekanism:bio_fuel', `#misctags:biofuel5`, 5)
+  mekCrush('mekanism:bio_fuel', `#misctags:biofuel7`, 7)
+  mekCrush('mekanism:bio_fuel', `#misctags:biofuel8`, 8)
 
   mekEnrich('minecraft:blaze_rod', 1, 'minecraft:blaze_powder', 4)
   mekEnrich('mysticalagriculture:prosperity_shard', 4, 'mysticalagriculture:prosperity_ore')
