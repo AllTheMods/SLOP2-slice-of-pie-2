@@ -8,7 +8,7 @@ onEvent('block.right_click', e => {
   //check full ultimate energy cube
   function checkUEC(targetBlock) {
     if (targetBlock.getId().equals('mekanism:ultimate_energy_cube')) {
-      if (targetBlock.getEntityData().EnergyContainers[0].stored == 4096000) {
+      if (targetBlock.getEntityData().EnergyContainers[0].stored == 4096000000) {
         return true
       }
     }
