@@ -57,8 +57,6 @@ onEvent('recipes', e => {
       'pamhc2foodcore:sweetberryjuiceitem',
       'pamhc2foodcore:p8juiceitem',
 
-      'industrialforegoing:infinity_drill',
-
       'bambooeverything:bamboo_bundle',
 
       'storagedrawers:compacting_drawers_3',

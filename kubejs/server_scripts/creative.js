@@ -96,14 +96,13 @@ onEvent('recipes', e => {
       }]
     }
   }), [
-    ' L ',
-    'UCU',
-    ' S '
+    'RMR',
+    'MSM',
+    'RMR'
   ], {
     S: atm_star,
-    U: Item.of('mekanism:ultimate_energy_cube', {mekData:{EnergyContainers:[{Container:0,stored:"4096000000"}]}}),
-    C: 'mekanism:creative_energy_cube',
-    L: 'thermal:lightning_charge'
+    M: 'mekanism:ultimate_induction_provider',
+    R: 'mekanism:creative_energy_cube'
   })
 
   //Create

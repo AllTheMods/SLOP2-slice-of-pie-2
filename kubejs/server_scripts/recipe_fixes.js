@@ -7,7 +7,6 @@ onEvent('recipes', e => {
   e.remove({
     output: [
       'resourcefulbees:bee_jar',
-      'create:andesite_alloy',
       'minecraft:repeater',
       'minecraft:beacon',
       'minecraft:stonecutter',
@@ -29,7 +28,7 @@ onEvent('recipes', e => {
   //#region ADDITIONS
 
   //#region CREATE
-  e.shaped('8x create:andesite_alloy', [
+  /*e.shaped('8x create:andesite_alloy', [
     'NA',
     'AN'
   ], {
@@ -39,7 +38,7 @@ onEvent('recipes', e => {
   e.recipes.create.mixing('8x create:andesite_alloy', [
     'minecraft:andesite',
     ['#forge:nuggets/iron', '#forge:nuggets/zinc']
-  ])
+  ])*/
   e.custom({
     'type': 'create:sequenced_assembly',
     'ingredient': {
