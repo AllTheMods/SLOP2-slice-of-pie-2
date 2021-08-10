@@ -88,21 +88,15 @@ onEvent('recipes', e => {
     C: 'mekanism:ultimate_energy_cube'
   })
 
-  e.shaped(Item.of('mekanism:creative_energy_cube', {
-    mekData: {
-      EnergyContainers: [{
-        Container: 0,
-        stored: "18446744073709551615.9999"
-      }]
-    }
-  }), [
-    'RMR',
-    'MSM',
-    'RMR'
+  e.shaped(Item.of('mekanism:creative_energy_cube', {mekData: {EnergyContainers: [{Container: 0,stored: "18446744073709551615.9999"}]}}), [
+    ' L ',
+    'UCU',
+    ' S '
   ], {
     S: atm_star,
-    M: 'mekanism:ultimate_induction_provider',
-    R: 'mekanism:creative_energy_cube'
+    U: Item.of('mekanism:ultimate_energy_cube', {mekData:{EnergyContainers:[{Container:0,stored:"4096000000"}]}}),
+    C: 'mekanism:creative_energy_cube',
+    L: 'thermal:lightning_charge'
   })
 
   //Create
