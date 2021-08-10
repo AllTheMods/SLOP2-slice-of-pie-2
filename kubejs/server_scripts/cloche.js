@@ -304,9 +304,9 @@ events.listen('recipes', function(e) {
     t6('nitro_crystal')
 
     //Botanical Tier
-    //t3('manasteel')
-    //t4('elementium')
-    //t5('terrasteel')
+    t3('manasteel')
+    t4('elementium')
+    t5('terrasteel')
 
     //Magical Tier
 })
