@@ -1,5 +1,5 @@
 {
-    "flower": "tag:misctags:flowers/glowing_flowers",
+    "flower": "minecraft:glowstone",
     "maxTimeInHive": 1200,
     "traits": ["nether", "pigman"],
     "hasHoneycomb": true,
