@@ -1,5 +1,9 @@
 //priority: 100
 onEvent(`jei.hide.items`, e => {
+  //#region constants
+  const typeFirst = ['mekanism', 'immersiveengineering']
+  //#endregion
+  //#region functions
   function hideWood(list) {
     list.forEach(type => {
       if (!Ingredient.of(`/biomesoplenty:.*${type}/`).isEmpty()) e.hide(`/biomesoplenty:.*${type}/`)
@@ -12,8 +16,6 @@ onEvent(`jei.hide.items`, e => {
       if (!Ingredient.of(`/enviromats:.*_${type}/`).isEmpty()) e.hide(`/enviromats:.*_${type}/`)
     })
   }
-
-  const typeFirst = ['mekanism', 'immersiveengineering']
   function hideMetal(mod, name, types) {
     types.forEach(type => {
       const id = typeFirst.includes(mod) ? `${mod}:${type}_${name}` : `${mod}:${name}_${type}`
@@ -26,7 +28,8 @@ onEvent(`jei.hide.items`, e => {
       if (!Ingredient.of(id).isEmpty()) e.hide(id)
     })
   }
-
+  //#endregion
+  
   e.hide([
     `/enviromats:alabaster.*/`,
 
