@@ -3,109 +3,33 @@ onEvent('recipes', e => {
   const colors = [`white`, `light_gray`, `gray`, `black`, `red`, `orange`, `yellow`, `lime`, `green`, `light_blue`, `cyan`, `blue`, `purple`, `magenta`, `pink`, `brown`]
   const craftingShapes = [
     //vertical
-    [
-      '  C',
-      '  C',
-      '  C'
-    ], [
-      ' C ',
-      ' C ',
-      ' C '
-    ], [
-      'C  ',
-      'C  ',
-      'C  '
-    ],
+    ['  C','  C','  C'],
+    [' C ',' C ',' C '],
+    ['C  ','C  ','C  '],
     //horizontal 
-    [
-      'CCC',
-      '   ',
-      '   '
-    ], [
-      '   ',
-      'CCC',
-      '   '
-    ], [
-      '   ',
-      '   ',
-      'CCC'
-    ],
+    ['CCC','   ','   '],
+    ['   ','CCC','   '],
+    ['   ','   ','CCC'],
     //diagonal
-    [
-      '  C',
-      ' C ',
-      'C  '
-    ], [
-      'C  ',
-      ' C ',
-      '  C'
-    ],
+    ['  C',' C ','C  '],
+    ['C  ',' C ','  C'],
     //misc
-    [
-      '  C',
-      ' C ',
-      ' C '
-    ], [
-      ' C ',
-      'C  ',
-      'C  '
-    ], [
-      '  C',
-      'CC ',
-      '   '
-    ], [
-      '   ',
-      '  C',
-      'CC '
-    ], [
-      '  C',
-      '  C',
-      ' C '
-    ], [
-      ' C ',
-      ' C ',
-      'C  '
-    ], [
-      'C C',
-      ' C ',
-      '   '
-    ], [
-      '   ',
-      'C C',
-      ' C '
-    ], [
-      ' C ',
-      ' C ',
-      '  C'
-    ], [
-      'C  ',
-      'C  ',
-      ' C '
-    ], [
-      '   ',
-      ' C ',
-      'C C'
-    ], [
-      ' C ',
-      'C C',
-      '   '
-    ], [
-      '  C',
-      ' C ',
-      '  C'
-    ], [
-      ' C ',
-      'C  ',
-      ' C '
-    ], [
-      '   ',
-      'CC ',
-      '  C'
-    ], [
-      'CC ',
-      '  C',
-      '   '
-    ]
+    ['  C',' C ',' C '],
+    [' C ','C  ','C  '],
+    ['  C','CC ','   '],
+    ['   ','  C','CC '],
+    ['  C','  C',' C '],
+    [' C ',' C ','C  '],
+    ['C C',' C ','   '],
+    ['   ','C C',' C '],
+    [' C ',' C ','  C'],
+    ['C  ','C  ',' C '],
+    ['   ',' C ','C C'],
+    [' C ','C C','   '],
+    ['  C',' C ','  C'],
+    [' C ','C  ',' C '],
+    ['   ','CC ','  C'],
+    ['CC ','  C','   ']
   ] // 25 now
   const dyes = []
   const botaniaFlowers = []
