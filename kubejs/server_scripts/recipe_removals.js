@@ -2,6 +2,7 @@
 onEvent('recipes', e => {
   const idRemove = [
     //spam removal
+    'createaddition:crushing/diamond_ore',
     'thermal:compat/mysticalagriculture/insolator_mysticalag_zombie_pigman_seeds',
     'thermal:compat/mysticalagriculture/insolator_mysticalag_husk_seeds',
     'thermal:compat/mysticalagriculture/insolator_mysticalag_panda_seeds',

@@ -218,6 +218,7 @@
 		"Replace Worldgen Chests" = true
 		#Chests to put in each structure. The format per entry is "structure=chest", where "structure" is a structure ID, and "chest" is a block ID, which must correspond to a standard chest block.
 		"Structure Chests" = ["minecraft:village_plains=quark:oak_chest", "minecraft:igloo=quark:spruce_chest", "minecraft:village_snowy=quark:spruce_chest", "minecraft:village_taiga=quark:spruce_chest", "minecraft:desert_pyramid=quark:birch_chest", "minecraft:jungle_pyramid=quark:jungle_chest", "minecraft:village_desert=quark:jungle_chest", "minecraft:village_savanna=quark:acacia_chest", "minecraft:mansion=quark:dark_oak_chest", "minecraft:pillager_outpost=quark:dark_oak_chest", "minecraft:ruined_portal=quark:crimson_chest", "minecraft:bastion_remnant=quark:crimson_chest", "minecraft:fortress=quark:nether_brick_chest", "minecraft:endcity=quark:purpur_chest"]
+		"Enable Reverting Wooden Chests" = true
 
 	[building.variant_ladders]
 		"Change Names" = true
@@ -513,6 +514,7 @@
 	"Sandstone Underground Biome" = true
 	"Slime Underground Biome" = true
 	"Spider Nest Underground Biome" = true
+	Deepslate = true
 
 	[world.big_dungeon]
 		#The chance that a big dungeon spawn candidate will be allowed to spawn. 0.2 is 20%, which is the same as the Pillager Outpost.
@@ -1640,6 +1642,15 @@
 				# beach, void, overworld, nether, end]
 				"Biome Types" = ["plains"]
 				"Is Blacklist" = false
+
+	[world.deepslate]
+		"Sheet Height" = 18
+		"Sheet Height Variance" = 6
+		"Sheet Y Start" = 0
+
+		[world.deepslate.dimensions]
+			"Is Blacklist" = false
+			Dimensions = ["minecraft:overworld"]
 
 [mobs]
 	Crabs = true

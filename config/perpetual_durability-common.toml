@@ -1,0 +1,7 @@
+
+[enchantments]
+
+	[enchantments.perpetual]
+		#ID of the item being used for getting the Perpetual Enchant [default: "minecraft:nether_star"]
+		enchantItem = "kubejs:nether_star_block"
+
