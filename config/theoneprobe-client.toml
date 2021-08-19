@@ -57,17 +57,17 @@ boxTopY = 5
 #Range: -1 ~ 10000
 boxBottomY = -1
 #Color of the border of the box (0 to disable)
-boxBorderColor = "ff4503d0"
+boxBorderColor = "0"
 #Color of the box (0 to disable)
-boxFillColor = "ff000000"
+boxFillColor = "0"
 #Thickness of the border of the box (0 to disable)
 #Range: 0 ~ 20
-boxThickness = 1
+boxThickness = 0
 #How much the border should be offset (i.e. to create an 'outer' border)
 #Range: 0 ~ 20
-boxOffset = 1
+boxOffset = 0
 #If true show liquid information when the probe hits liquid first
-showLiquids = false
+showLiquids = true
 #Toggle default probe visibility (client can override)
 isVisible = true
 #If true then the probe hotkey must be held down to show the tooltip
@@ -81,7 +81,7 @@ chestContentsBorderColor = "ff006699"
 #Range: 0 ~ 2
 showBreakProgress = 1
 #true means shows harvestability with vanilla style icons
-harvestStyleVanilla = true
+harvestStyleVanilla = false
 #This is a list of entities that will not be rendered by TOP. This option also works if it is set client-side alone
 renderBlacklist = []
 

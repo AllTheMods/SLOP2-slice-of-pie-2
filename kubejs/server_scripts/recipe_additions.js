@@ -167,9 +167,11 @@ onEvent('recipes', e => {
   e.recipes.create.splashing([Item.of('alltheores:platinum_nugget', 10), Item.of('alltheores:platinum_nugget', 5).withChance(0.5)], 'create:crushed_platinum_ore')
   e.smelting(item.of('alltheores:platinum_ingot'), 'create:crushed_platinum_ore').xp(1)
   e.smelting(item.of('alltheores:aluminum_ingot'), 'create:crushed_aluminum_ore').xp(1)
-  const ingredients = []
-  for(let i = 0; i < 64; i++) ingredients.push({"item": "engineerstools:musli_bar"})
-  e.recipes.create.mixing('5x kubejs:potassium_dust', ingredients).superheated()
+  // const ingredients = []
+  // for(let i = 0; i < 64; i++) ingredients.push({"item": "engineerstools:musli_bar"})
+  // e.recipes.create.mixing('5x kubejs:potassium_dust', ingredients).superheated()
+  e.recipes.create.mixing('5x kubejs:potassium_dust', {item: "engineerstools:musli_bar", count: 64}).superheated()
+  e.replaceOutput({}, 'createaddition:diamond_grit', 'thermal:diamond_dust')
 
   //Thermal
   e.recipes.thermal.press('create:brass_sheet', 'create:brass_ingot', 1)

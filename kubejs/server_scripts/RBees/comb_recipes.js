@@ -1,111 +1,36 @@
 onEvent('recipes', e => {
+  //#region constants
   const cuShaped = e.recipes.cucumber.shaped_no_mirror
   const colors = [`white`, `light_gray`, `gray`, `black`, `red`, `orange`, `yellow`, `lime`, `green`, `light_blue`, `cyan`, `blue`, `purple`, `magenta`, `pink`, `brown`]
   const craftingShapes = [
     //vertical
-    [
-      '  C',
-      '  C',
-      '  C'
-    ], [
-      ' C ',
-      ' C ',
-      ' C '
-    ], [
-      'C  ',
-      'C  ',
-      'C  '
-    ],
+    ['  C', '  C', '  C'],
+    [' C ', ' C ', ' C '],
+    ['C  ', 'C  ', 'C  '],
     //horizontal 
-    [
-      'CCC',
-      '   ',
-      '   '
-    ], [
-      '   ',
-      'CCC',
-      '   '
-    ], [
-      '   ',
-      '   ',
-      'CCC'
-    ],
+    ['CCC', '   ', '   '],
+    ['   ', 'CCC', '   '],
+    ['   ', '   ', 'CCC'],
     //diagonal
-    [
-      '  C',
-      ' C ',
-      'C  '
-    ], [
-      'C  ',
-      ' C ',
-      '  C'
-    ],
+    ['  C', ' C ', 'C  '],
+    ['C  ', ' C ', '  C'],
     //misc
-    [
-      '  C',
-      ' C ',
-      ' C '
-    ], [
-      ' C ',
-      'C  ',
-      'C  '
-    ], [
-      '  C',
-      'CC ',
-      '   '
-    ], [
-      '   ',
-      '  C',
-      'CC '
-    ], [
-      '  C',
-      '  C',
-      ' C '
-    ], [
-      ' C ',
-      ' C ',
-      'C  '
-    ], [
-      'C C',
-      ' C ',
-      '   '
-    ], [
-      '   ',
-      'C C',
-      ' C '
-    ], [
-      ' C ',
-      ' C ',
-      '  C'
-    ], [
-      'C  ',
-      'C  ',
-      ' C '
-    ], [
-      '   ',
-      ' C ',
-      'C C'
-    ], [
-      ' C ',
-      'C C',
-      '   '
-    ], [
-      '  C',
-      ' C ',
-      '  C'
-    ], [
-      ' C ',
-      'C  ',
-      ' C '
-    ], [
-      '   ',
-      'CC ',
-      '  C'
-    ], [
-      'CC ',
-      '  C',
-      '   '
-    ]
+    ['  C', ' C ', ' C '],
+    [' C ', 'C  ', 'C  '],
+    ['  C', 'CC ', '   '],
+    ['   ', '  C', 'CC '],
+    ['  C', '  C', ' C '],
+    [' C ', ' C ', 'C  '],
+    ['C C', ' C ', '   '],
+    ['   ', 'C C', ' C '],
+    [' C ', ' C ', '  C'],
+    ['C  ', 'C  ', ' C '],
+    ['   ', ' C ', 'C C'],
+    [' C ', 'C C', '   '],
+    ['  C', ' C ', '  C'],
+    [' C ', 'C  ', ' C '],
+    ['   ', 'CC ', '  C'],
+    ['CC ', '  C', '   ']
   ] // 25 now
   const dyes = []
   const botaniaFlowers = []
@@ -161,25 +86,27 @@ onEvent('recipes', e => {
     'resourcefulbees:rainbow_honey',
     'resourcefulbees:catnip_honey',
   ]
-
-  function shapedRecipe(results_, craftingItem_, itemCount_) {
-    const maxLength = Math.min(craftingShapes.length, results_.length)
+  //#endregion
+  //#region functions
+  function shapedRecipe(results, craftingItem, itemCount) {
+    const maxLength = Math.min(craftingShapes.length, results.length)
     for (let i = 0; i < maxLength; i++) {
       cuShaped({
         pattern: craftingShapes[i],
         key: {
           C: {
-            item: craftingItem_
+            item: craftingItem
           }
         },
         result: {
-          item: results_[i],
-          count: itemCount_
+          item: results[i],
+          count: itemCount
         }
       })
     }
   }
-
+  //#endregion
+  //#region recipes
   //Comb to Bucket
   e.shaped('minecraft:water_bucket', [
     ' C ',
@@ -222,4 +149,5 @@ onEvent('recipes', e => {
   shapedRecipe(meat, `resourcefulbees:kobee_beef_honeycomb_block`, 27)
   shapedRecipe(stones, `resourcefulbees:stan_honeycomb`, 2)
   shapedRecipe(stones, `resourcefulbees:stan_honeycomb_block`, 18)
+  //#endregion
 })

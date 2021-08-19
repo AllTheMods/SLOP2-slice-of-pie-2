@@ -2,7 +2,7 @@
 [advanced]
 	#How items should be handed to you
 	#Allowed Values: INVENTORY, MOUSE_PICKUP
-	GiveMode = "MOUSE_PICKUP"
+	GiveMode = "INVENTORY"
 	#Debug mode enabled
 	DebugMode = false
 	#Display search bar in the center
@@ -42,9 +42,9 @@
 	ResourceIdSearchMode = "DISABLED"
 	#Search mode for Tooltips (prefix: #)
 	#Allowed Values: ENABLED, REQUIRE_PREFIX, DISABLED
-	TooltipSearchMode = "ENABLED"
+	TooltipSearchMode = "REQUIRE_PREFIX"
 	#Search advanced tooltips (visible with F3+H)
-	SearchAdvancedTooltips = false
+	SearchAdvancedTooltips = true
 
 [modname]
 	#Formatting for mod name tooltip

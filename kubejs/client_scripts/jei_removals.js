@@ -28,17 +28,17 @@ onEvent(`jei.hide.items`, e => {
   }
 
   e.hide([
-    `/enviromats:alabaster.*/`,
-
-    `/biomesoplenty:white.*/`,
-    `/biomesoplenty:orange.*/`,
-    `/biomesoplenty:black.*/`,
+    `createaddition:diamond_grit`,
+    /alltheores:ore_other.*/,
+    /enviromats:alabaster.*/,
+    /biomesoplenty:white.*/,
+    /biomesoplenty:orange.*/,
+    /biomesoplenty:black.*/,
     `biomesoplenty:mud`,
     `biomesoplenty:mud_bricks`,
     `biomesoplenty:mud_brick_stairs`,
     `biomesoplenty:mud_brick_slab`,
     `biomesoplenty:mud_brick_wall`,
-
     /tconstruct:tinker_station/,
     /tconstruct:part_builder/,
     /tconstruct:crafting_station/,
@@ -67,24 +67,18 @@ onEvent(`jei.hide.items`, e => {
     'tconstruct:molten_zinc_bucket',
     `tmechworks:copper_ingot`,
     `tmechworks:aluminum_ingot`,
-
     `@curios`,
-
     `quark:ancient_tome`,
-
     `appliedenergistics2:flour`,
-    `/appliedenergistics2:facade/`,
-    `/appliedenergistics2:.*_cable/`,
-
+    /appliedenergistics2:facade/,
+    /appliedenergistics2:.*_cable/,
     /theoneprobe.*/,
     /titanium:.*/,
-
     `bloodmagic:saltpeter`,
     `bloodmagic:sulfur`,
     `bloodmagic:coalsand`,
     `bloodmagic:ironsand`,
     `bloodmagic:goldsand`,
-
     `mekanism:copper_ore`,
     `mekanism:tin_ore`,
     `mekanism:osmium_ore`,
@@ -94,30 +88,19 @@ onEvent(`jei.hide.items`, e => {
     `mekanism:block_charcoal`,
     /mekanism:creative_chemical_tank/,
     /mekanism:creative_fluid_tank/,
-
     /immersiveengineering:.+coke/,
     `immersiveengineering:coke`,
     `immersiveengineering:slag`,
     'immersivepetroleum:bitumen',
-
     /biggerreactors:yello.+/,
-
     /engineerstools:.+_grit/,
-
     `xreliquary:alkahestry_tome`,
-
     'mysticalagradditions:nitro_crystal_crux',
-
     /resourcefulbees:.+_bee_spawn_egg/,
-
-    // honey buckets
     'create:honey_bucket',
-
-    // oil buckets
     'thermal:creosote_bucket',
     'thermal:crude_oil_bucket',
     'immersivepetroleum:oil_bucket',
-
     'thermal:rf_coil_creative_augment',
     'thermal:fluid_tank_creative_augment',
     'thermal:machine_catalyst_creative_augment'

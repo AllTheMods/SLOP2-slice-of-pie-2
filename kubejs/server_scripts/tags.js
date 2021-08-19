@@ -1,6 +1,7 @@
 //priority: 1000
 onEvent(`item.tags`, e => {
-  [`aluminum`, `copper`, `lead`, `nickel`, `osmium`, `platinum`, `silver`, `tin`, `uranium`, `zinc`].forEach(item => {
+  const metals = [`aluminum`, `copper`, `lead`, `nickel`, `osmium`, `platinum`, `silver`, `tin`, `uranium`, `zinc`]
+  metals.forEach(item => {
     //Mek Clumps
     e.add(`mekanism:clumps/${item}`, `alltheores:${item}_clump`)
     e.add(`mekanism:clumps`, `#mekanism:clumps/${item}`)

@@ -59,7 +59,7 @@
 	#Range: > 0
 	heater_furnace_engine_consumption = 400
 	#Enable Induction Heater when attached to a Furnace Engine.
-	heater_furnace_engine_enable = false
+	heater_furnace_engine_enable = true
 
 #Wires
 [wires]
