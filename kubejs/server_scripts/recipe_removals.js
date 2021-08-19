@@ -38,6 +38,7 @@ onEvent('recipes', e => {
 
   e.remove({
     output: [
+      'mekanism:upgrade/anchor',
       'quark:oak_chest',
       'quark:dark_oak_chest',
       'quark:acacia_chest',
